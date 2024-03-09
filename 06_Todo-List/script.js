@@ -1,9 +1,9 @@
 let listState = [];
 
-// const STATE_KEY 存儲或檢索瀏覽器本地存儲中的數據
+// const STATE_KEY stores the key for the localStorage
 const STATE_KEY = "todo-list";
 
-// 讀取功能: localStage() 從 STATE_KEY getItem，如果不是null，return Json.parse(listState)，用Json.parse將字串轉為物件 else return []
+//  localStage() getItem from STATE_KEY, if not null return JSON.parse(listState) else return []
 function loadState() {
   const listState = localStorage.getItem(STATE_KEY);
   if (listState !== null) {
@@ -12,12 +12,12 @@ function loadState() {
   return [];
 }
 
-// 存儲功能 saveState ，使用JSON.stringfy方法
+// use JSON.stringify() to save listState to localStorage
 function saveState(list) {
   localStorage.setItem(STATE_KEY, JSON.stringify(list));
 }
 
-// initList() 讀取 LoadState() 後用 for of 顯示，創建文字、方框、刪除鍵，檢查方框是否打勾並顯示
+// initList() load LoadState() and use for of loop to render list
 function initList() {
   // load state
   listState = loadState();
@@ -42,7 +42,7 @@ function initList() {
   }
 }
 
-// 取得 addButtom 讓它 click 時 addItem
+// get input value and create new item
 function addItem() {
   const ul = document.getElementById("list");
   const input = document.getElementById("input");
@@ -64,7 +64,7 @@ function addItem() {
 
   newItem.appendChild(deleteButton);
 
-  // push listState，再將 listState 存入 localStorage
+  // push listState to newItem and saveState
   listState.push({
     text,
     checked: false,
@@ -75,39 +75,40 @@ function addItem() {
   ul.appendChild(newItem);
 }
 
-// checkItem，點擊item後打勾，用toggle(開關)
+// checkItem click event and toggle class checked
 function checkItem(e) {
-  const item = e.target; // e.target 是被點擊的元素
+  const item = e.target; // e.target is the clicked element
   const parent = item.parentNode;
-  // Array.from() 方法將類陣列轉換為陣列，並使用 indexOf() 方法找到 item 在 parent.childNodes 中的索引
+  // Array.from() method creates a new, shallow-copied Array instance from an array-like or iterable object.
   const idx = Array.from(parent.childNodes).indexOf(item);
 
-  // 確認是否打勾
+  // change listState[idx].checked to the opposite value
   listState[idx].checked = !listState[idx].checked;
 
+  // toggle class checked
   item.classList.toggle("checked");
   saveState(listState);
 }
 
-// deleteButtom，點擊時刪除 newItem
+// deleteButtom remove item from listState and remove the item from the DOM
 function deleteItem(e) {
   const item = this.parentNode;
   const parent = item.parentNode;
   const idx = Array.from(parent.childNodes).indexOf(item);
-  // 點擊刪除時，用 filter 方法更新 listState 陣列並移除 DOM 元素
+  // when click deleteButton, remove the item from listState, use filter() to create a new array
   listState = listState.filter((_, i) => i !== idx);
   parent.removeChild(item);
   saveState(listState);
   e.stopPropagation();
 }
 
-// 在每次add、check、delete儲存在LocalStorage，創建 listState 空 Array
+// call initList() to render the list
 initList();
 
 const addButton = document.getElementById("add-button");
 addButton.addEventListener("click", addItem);
 
-// prevenDefault() 防止刷新
+// prevenDefault() to prevent the form from submitting
 const form = document.getElementById("input-wrapper");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
