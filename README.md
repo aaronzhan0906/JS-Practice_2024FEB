@@ -15,6 +15,8 @@ https://aaronzhan0906.github.io/JS-Practice_02_DOM/
 03_Stopwatch
 https://aaronzhan0906.github.io/JS-Practice_03_Stopwatch/
 
+<img width="500" alt="截圖 2024-03-09 晚上10 31 31" src="https://github.com/aaronzhan0906/JS-Practice_2024FEB/assets/156295425/8a9d74df-c212-476d-bf3d-4e334743abbb">
+
 04_Paperscissorstone
 https://aaronzhan0906.github.io/JS-Practice_04_Paperscissorstone/
 
