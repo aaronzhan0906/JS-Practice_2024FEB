@@ -8,6 +8,7 @@ https://aaronzhan0906.github.io/JS-Practice_01_Memo/
 
 02_DOM
 https://aaronzhan0906.github.io/JS-Practice_02_DOM/
+
 <img width="500" alt="截圖 2024-03-09 晚上10 30 35" src="https://github.com/aaronzhan0906/JS-Practice_2024FEB/assets/156295425/f13c953f-29ef-4a99-8eed-2f53a178290b">
 
 
