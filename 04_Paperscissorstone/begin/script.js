@@ -19,9 +19,8 @@ function getResult(playerChoice, computerChoice) {
   }
   return score;
 }
-// showResult 函數根據得分在 DOM 上更新為 你贏了 或 你輸了 或 平手！，
-// 同時顯示玩家的選擇和電腦的選擇
 
+// show the result of the game
 function showResult(score, playerChoice, computerChoice) {
   let result = document.getElementById("result");
   switch (score) {
@@ -36,33 +35,28 @@ function showResult(score, playerChoice, computerChoice) {
       break;
   }
 }
-// ** 計算誰贏了並在屏幕上顯示 **
+// onClickPSS function to handle the game logic when the player clicks on a button to choose paper, scissors, or stone
 function onClickPSS(playerChoice) {
   const computerChoice = getComputerChoice();
   const score = getResult(playerChoice.value, computerChoice);
   showResult(score, playerChoice.value, computerChoice);
 }
 
-// ** 讓剪刀石頭布按鈕 actively 監聽點擊事件，一旦檢測到點擊就執行某些動作 **
 function playGame() {
-  // 使用 querySelector 選擇所有的 按鈕
-  // * 為每個剪刀石頭布按鈕添加點擊事件監聽器，每次單擊時，它都會使用上次單擊的 PSS 按鈕調用 onClickPSS 函數 *
+  // querySelectorAll() method to select all the buttons with the class pssButton
   let pssButtons = document.querySelectorAll(".pssButton");
 
-  // 1. 使用 forEach 迴圈遍歷按鈕
-  // 2. 為每個按鈕添加 'click' 事件監聽器
-  // 3. 每當有人單擊時調用 onClickPSS 函數
-  // 4. 確保將當前選定的剪刀石頭布按鈕作為引數傳遞
+  // use forEach() method to loop through all the buttons and add an onclick event to each of them
   pssButtons.forEach((pssButton) => {
     pssButton.onclick = () => onClickPSS(pssButton);
   });
 
-  // 添加 click 事件監聽器到結束遊戲按鈕上，單擊時運行 endGame() 函數
+  
   let endGameButton = document.getElementById("endGameButton");
   endGameButton.onclick = () => endGame();
 }
 
-// ** endGame 函數清除 DOM 上的所有文本 **
+// endGame clears the player score, hands, and result
 function endGame() {
   let playerScore = document.getElementById("player-score");
   let hands = document.getElementById("hands");
