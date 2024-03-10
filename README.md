@@ -1,7 +1,7 @@
 # JS-Practice_2024FEB
 
 
-<a href=https://aaronzhan0906.github.io/JS-Practice_01_Memo/ target="_blank">01_Memo</a>
+<a href=https://aaronzhan0906.github.io/JS-Practice_01_Memo/>01_Memo</a>
 
 <img width="500" alt="截圖 2024-03-09 晚上10 28 36" src="https://github.com/aaronzhan0906/JS-Practice_2024FEB/assets/156295425/519e558f-48c6-4a5e-914c-68f4a266108b">
 
