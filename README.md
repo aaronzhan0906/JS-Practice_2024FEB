@@ -28,6 +28,6 @@
 <img width="500" alt="截圖 2024-03-09 晚上10 33 12" src="https://github.com/aaronzhan0906/JS-Practice_2024FEB/assets/156295425/896045ad-51cf-4c15-9610-60fb9522bb5e">
 
 
-<a href=https://aaronzhan0906.github.io/JS-Practice_06_Todo-List/target="_blank">06_Todo-List</a>
+<a href=https://aaronzhan0906.github.io/JS-Practice_06_Todo-List/>06_Todo-List</a>
 
 <img width="500" alt="截圖 2024-03-09 晚上10 33 50" src="https://github.com/aaronzhan0906/JS-Practice_2024FEB/assets/156295425/e0b28116-fefb-408f-b9ed-a1373cfe0dba">
