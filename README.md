@@ -23,7 +23,7 @@
 <img width="500" alt="截圖 2024-03-09 晚上10 32 19" src="https://github.com/aaronzhan0906/JS-Practice_2024FEB/assets/156295425/3af67ec0-5be2-48b0-93e5-bc616d1935ea">
 
 
-<a href=https://aaronzhan0906.github.io/JS-Practice_05_API/>05_API_dog_random</a>
+<a href=https://aaronzhan0906.github.io/JS-Practice_05_API/>05_API_dograndom</a>
 
 <img width="500" alt="截圖 2024-03-09 晚上10 33 12" src="https://github.com/aaronzhan0906/JS-Practice_2024FEB/assets/156295425/896045ad-51cf-4c15-9610-60fb9522bb5e">
 
